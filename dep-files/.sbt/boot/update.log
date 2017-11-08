@@ -1,6 +1,6 @@
-setting 'ivy.default.settings.dir' to 'jar:file:/usr/share/sbt-launcher-packaging/bin/sbt-launch.jar!/org/apache/ivy/core/settings'
-setting 'ivy.basedir' to '/home/joist/rocket/sbt-launcher-packaging-0.13.13/bin/.'
-setting 'ivy.default.conf.dir' to 'jar:file:/usr/share/sbt-launcher-packaging/bin/sbt-launch.jar!/org/apache/ivy/core/settings'
+setting 'ivy.default.settings.dir' to 'jar:file:/home/joist/riscv/rocket-chip/sbt-launch.jar!/org/apache/ivy/core/settings'
+setting 'ivy.basedir' to '/home/joist/riscv/rocket-chip/firrtl/.'
+setting 'ivy.default.conf.dir' to 'jar:file:/home/joist/riscv/rocket-chip/sbt-launch.jar!/org/apache/ivy/core/settings'
 impossible to define new type: class not found: org.apache.ivy.plugins.resolver.SshResolver in [] nor Ivy classloader
 impossible to define new type: class not found: org.apache.ivy.plugins.resolver.VsftpResolver in [] nor Ivy classloader
 impossible to define new type: class not found: org.apache.ivy.plugins.version.PatternVersionMatcher in [] nor Ivy classloader
@@ -32,8 +32,8 @@ setting 'user.country' to 'KR'
 setting 'sun.java.launcher' to 'SUN_STANDARD'
 setting 'sun.os.patch.level' to 'unknown'
 setting 'java.vm.specification.name' to 'Java Virtual Machine Specification'
-setting 'user.dir' to '/home/joist/rocket/sbt-launcher-packaging-0.13.13/bin'
-setting 'java.runtime.version' to '1.8.0_91-8u91-b14-0ubuntu4~15.10.1-b14'
+setting 'user.dir' to '/home/joist/riscv/rocket-chip/firrtl'
+setting 'java.runtime.version' to '1.8.0_91-8u91-b14-3ubuntu1~15.10.1-b14'
 setting 'java.awt.graphicsenv' to 'sun.awt.X11GraphicsEnvironment'
 setting 'java.endorsed.dirs' to '/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed'
 setting 'os.arch' to 'amd64'
@@ -44,20 +44,22 @@ setting 'java.vm.specification.vendor' to 'Oracle Corporation'
 setting 'os.name' to 'Linux'
 setting 'sun.jnu.encoding' to 'UTF-8'
 setting 'java.library.path' to '/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib'
+setting 'javax.net.ssl.trustStore' to '/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/jssecacerts'
+setting 'sbt.repository.secure' to 'false'
 setting 'java.specification.name' to 'Java Platform API Specification'
 setting 'java.class.version' to '52.0'
 setting 'sun.management.compiler' to 'HotSpot 64-Bit Tiered Compilers'
 setting 'os.version' to '4.2.0-36-generic'
 setting 'user.home' to '/home/joist'
-setting 'user.timezone' to ''
+setting 'user.timezone' to 'Asia/Seoul'
 setting 'java.awt.printerjob' to 'sun.print.PSPrinterJob'
 setting 'file.encoding' to 'UTF-8'
 setting 'java.specification.version' to '1.8'
-setting 'java.class.path' to '/usr/share/sbt-launcher-packaging/bin/sbt-launch.jar'
+setting 'java.class.path' to '/home/joist/riscv/rocket-chip/sbt-launch.jar'
 setting 'user.name' to 'joist'
 setting 'jline.shutdownhook' to 'false'
 setting 'java.vm.specification.version' to '1.8'
-setting 'sun.java.command' to '/usr/share/sbt-launcher-packaging/bin/sbt-launch.jar'
+setting 'sun.java.command' to '/home/joist/riscv/rocket-chip/sbt-launch.jar assembly'
 setting 'java.home' to '/usr/lib/jvm/java-8-openjdk-amd64/jre'
 setting 'sun.arch.data.model' to '64'
 setting 'user.language' to 'ko'
@@ -81,213 +83,269 @@ no default cache defined: set to /home/joist/.ivy2/cache
 setting 'ivy.checksums' to 'sha1,md5'
 setting 'ivy.basedir' to '/home/joist/.sbt/boot'
 setting 'basedir' to '/home/joist/.sbt/boot'
-:: resolving dependencies :: org.scala-sbt#boot-app;1.0
+setting 'scala' to '2.10.6'
+:: resolving dependencies :: org.scala-sbt#boot-scala;1.0
 	confs: [default]
 	validate = true
 	refresh = false
 resolving dependencies for configuration 'default'
-== resolving dependencies for org.scala-sbt#boot-app;1.0 [default]
-loadData of org.scala-sbt#boot-app;1.0 of rootConf=default
-== resolving dependencies org.scala-sbt#boot-app;1.0->org.scala-sbt#sbt;0.13.12 [default->default(compile)]
-loadData of org.scala-sbt#sbt;0.13.12 of rootConf=default
-	using redefined-public to resolve org.scala-sbt#sbt;0.13.12
-redefined-public: Checking cache for: dependency: org.scala-sbt#sbt;0.13.12 {default=[default(compile)]}
+== resolving dependencies for org.scala-sbt#boot-scala;1.0 [default]
+loadData of org.scala-sbt#boot-scala;1.0 of rootConf=default
+== resolving dependencies org.scala-sbt#boot-scala;1.0->org.scala-lang#scala-compiler;2.10.6 [default->default]
+loadData of org.scala-lang#scala-compiler;2.10.6 of rootConf=default
+	using redefined-public to resolve org.scala-lang#scala-compiler;2.10.6
+redefined-public: Checking cache for: dependency: org.scala-lang#scala-compiler;2.10.6 {default=[default, optional(default)]}
 redefined-public: no namespace defined: using system
-	no ivy file in cache for org.scala-sbt#sbt;0.13.12: tried /home/joist/.ivy2/cache/org.scala-sbt/sbt/ivy-0.13.12.xml
+No entry is found in the ModuleDescriptorCache : /home/joist/.ivy2/cache/org.scala-lang/scala-compiler/ivy-2.10.6.xml
+post 1.3 ivy file: using exact as default matcher
+	found ivy file in cache for org.scala-lang#scala-compiler;2.10.6 (resolved by redefined-public): /home/joist/.ivy2/cache/org.scala-lang/scala-compiler/ivy-2.10.6.xml
+redefined-public: module revision found in cache: org.scala-lang#scala-compiler;2.10.6
 redefined-public: no latest strategy defined: using default
+	found org.scala-lang#scala-compiler;2.10.6 in redefined-public
+== resolving dependencies org.scala-sbt#boot-scala;1.0->org.scala-lang#scala-compiler;2.10.6 [default->runtime]
+loadData of org.scala-lang#scala-compiler;2.10.6 of rootConf=default
+== resolving dependencies org.scala-sbt#boot-scala;1.0->org.scala-lang#scala-compiler;2.10.6 [default->compile]
+loadData of org.scala-lang#scala-compiler;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->master(*)]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+	using redefined-public to resolve org.scala-lang#scala-library;2.10.6
+redefined-public: Checking cache for: dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+No entry is found in the ModuleDescriptorCache : /home/joist/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml
+post 1.3 ivy file: using exact as default matcher
+	found ivy file in cache for org.scala-lang#scala-library;2.10.6 (resolved by redefined-public): /home/joist/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml
+redefined-public: module revision found in cache: org.scala-lang#scala-library;2.10.6
+	found org.scala-lang#scala-library;2.10.6 in redefined-public
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->compile(*)]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->default]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->runtime]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->compile]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->master]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->runtime(*)]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->compile]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-reflect;2.10.6 [compile->master(*)]
+loadData of org.scala-lang#scala-reflect;2.10.6 of rootConf=default
+	using redefined-public to resolve org.scala-lang#scala-reflect;2.10.6
+redefined-public: Checking cache for: dependency: org.scala-lang#scala-reflect;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+No entry is found in the ModuleDescriptorCache : /home/joist/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.6.xml
+post 1.3 ivy file: using exact as default matcher
+	found ivy file in cache for org.scala-lang#scala-reflect;2.10.6 (resolved by redefined-public): /home/joist/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.6.xml
+redefined-public: module revision found in cache: org.scala-lang#scala-reflect;2.10.6
+	found org.scala-lang#scala-reflect;2.10.6 in redefined-public
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-reflect;2.10.6 [compile->compile(*)]
+loadData of org.scala-lang#scala-reflect;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-reflect;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->master(*)]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-lang#scala-reflect;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->compile(*)]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-reflect;2.10.6 [compile->runtime(*)]
+loadData of org.scala-lang#scala-reflect;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-reflect;2.10.6 [compile->compile]
+loadData of org.scala-lang#scala-reflect;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-reflect;2.10.6->org.scala-lang#scala-library;2.10.6 [runtime->runtime(*)]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-lang#scala-reflect;2.10.6->org.scala-lang#scala-library;2.10.6 [runtime->compile]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [runtime->runtime(*)]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [runtime->compile]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-reflect;2.10.6 [runtime->runtime(*)]
+loadData of org.scala-lang#scala-reflect;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-reflect;2.10.6 [runtime->compile]
+loadData of org.scala-lang#scala-reflect;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-sbt#boot-scala;1.0->org.scala-lang#scala-compiler;2.10.6 [default->master]
+loadData of org.scala-lang#scala-compiler;2.10.6 of rootConf=default
+== resolving dependencies org.scala-sbt#boot-scala;1.0->org.scala-lang#scala-compiler;2.10.6 [default->optional(default)]
+loadData of org.scala-lang#scala-compiler;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#jline;2.10.6 [optional->master(*)]
+loadData of org.scala-lang#jline;2.10.6 of rootConf=default
+	using redefined-public to resolve org.scala-lang#jline;2.10.6
+redefined-public: Checking cache for: dependency: org.scala-lang#jline;2.10.6 {optional=[compile(*), master(*)]}
+	no ivy file in cache for org.scala-lang#jline;2.10.6: tried /home/joist/.ivy2/cache/org.scala-lang/jline/ivy-2.10.6.xml
 local: no namespace defined: using system
-	no ivy file in cache for org.scala-sbt#sbt;0.13.12: tried /home/joist/.ivy2/cache/org.scala-sbt/sbt/ivy-0.13.12.xml
-	 trying /home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-		tried /home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-	local: resource not reachable for org.scala-sbt#sbt;0.13.12: res=/home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-	 trying /home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/jars/sbt.jar
-		tried /home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/jars/sbt.jar
-	local: resource not reachable for org.scala-sbt#sbt;0.13.12: res=/home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/jars/sbt.jar
-	local: no ivy file nor artifact found for org.scala-sbt#sbt;0.13.12
+	no ivy file in cache for org.scala-lang#jline;2.10.6: tried /home/joist/.ivy2/cache/org.scala-lang/jline/ivy-2.10.6.xml
+	 trying /home/joist/.ivy2/local/org.scala-lang/jline/2.10.6/ivys/ivy.xml
+		tried /home/joist/.ivy2/local/org.scala-lang/jline/2.10.6/ivys/ivy.xml
+	local: resource not reachable for org.scala-lang#jline;2.10.6: res=/home/joist/.ivy2/local/org.scala-lang/jline/2.10.6/ivys/ivy.xml
+	 trying /home/joist/.ivy2/local/org.scala-lang/jline/2.10.6/jars/jline.jar
+		tried /home/joist/.ivy2/local/org.scala-lang/jline/2.10.6/jars/jline.jar
+	local: resource not reachable for org.scala-lang#jline;2.10.6: res=/home/joist/.ivy2/local/org.scala-lang/jline/2.10.6/jars/jline.jar
+	local: no ivy file nor artifact found for org.scala-lang#jline;2.10.6
 Maven Central: no namespace defined: using system
-	no ivy file in cache for org.scala-sbt#sbt;0.13.12: tried /home/joist/.ivy2/cache/org.scala-sbt/sbt/ivy-0.13.12.xml
-	 trying https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.pom
-		tried https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.pom
-ERROR: Server access Error: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target url=https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.pom
-	Maven Central: resource not reachable for org/scala-sbt#sbt;0.13.12: res=https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.pom
-	 trying https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.jar
-		tried https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.jar
-ERROR: Server access Error: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target url=https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.jar
-	Maven Central: resource not reachable for org/scala-sbt#sbt;0.13.12: res=https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.jar
-	Maven Central: no ivy file nor artifact found for org.scala-sbt#sbt;0.13.12
-typesafe-ivy-releases: no namespace defined: using system
-	no ivy file in cache for org.scala-sbt#sbt;0.13.12: tried /home/joist/.ivy2/cache/org.scala-sbt/sbt/ivy-0.13.12.xml
-	 trying https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-		tried https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-ERROR: Server access Error: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-	typesafe-ivy-releases: resource not reachable for org.scala-sbt#sbt;0.13.12: res=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-	typesafe-ivy-releases: no ivy file found for org.scala-sbt#sbt;0.13.12
-sbt-ivy-snapshots: no namespace defined: using system
-	no ivy file in cache for org.scala-sbt#sbt;0.13.12: tried /home/joist/.ivy2/cache/org.scala-sbt/sbt/ivy-0.13.12.xml
-	 trying https://repo.scala-sbt.org/scalasbt/ivy-snapshots/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-		tried https://repo.scala-sbt.org/scalasbt/ivy-snapshots/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-ERROR: Server access Error: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target url=https://repo.scala-sbt.org/scalasbt/ivy-snapshots/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-	sbt-ivy-snapshots: resource not reachable for org.scala-sbt#sbt;0.13.12: res=https://repo.scala-sbt.org/scalasbt/ivy-snapshots/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-	sbt-ivy-snapshots: no ivy file found for org.scala-sbt#sbt;0.13.12
-WARN: 	module not found: org.scala-sbt#sbt;0.13.12
-WARN: ==== local: tried
-WARN:   /home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-WARN:   -- artifact org.scala-sbt#sbt;0.13.12!sbt.jar:
-WARN:   /home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/jars/sbt.jar
-WARN: ==== Maven Central: tried
-WARN:   https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.pom
-WARN:   -- artifact org.scala-sbt#sbt;0.13.12!sbt.jar:
-WARN:   https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.jar
-WARN: ==== typesafe-ivy-releases: tried
-WARN:   https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-WARN: ==== sbt-ivy-snapshots: tried
-WARN:   https://repo.scala-sbt.org/scalasbt/ivy-snapshots/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-Nbr of module to sort : 0
+	no ivy file in cache for org.scala-lang#jline;2.10.6: tried /home/joist/.ivy2/cache/org.scala-lang/jline/ivy-2.10.6.xml
+	 trying http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.pom
+		tried http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.pom
+	Maven Central: found md file for org.scala-lang#jline;2.10.6
+		=> http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.pom (2.10.6)
+	parser = pom parser
+	no ivy file in cache for org.scala-lang#jline;2.10.6: tried /home/joist/.ivy2/cache/org.scala-lang/jline/ivy-2.10.6.xml
+downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.pom ...
+	Maven Central: downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.pom
+		to /home/joist/.ivy2/cache/org.scala-lang/jline/ivy-2.10.6.xml.original.part
+sha1 file found for http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.pom: checking...
+	Maven Central: downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.pom.sha1
+		to /tmp/ivytmp2332920147520576009sha1
+sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.pom
+	[SUCCESSFUL ] org.scala-lang#jline;2.10.6!jline.pom(pom.original) (770ms)
+	 trying /home/joist/.ivy2/local/org.scala-lang/jline/2.10.6/jars/jline.jar
+		tried /home/joist/.ivy2/local/org.scala-lang/jline/2.10.6/jars/jline.jar
+	local: resource not reachable for org.scala-lang#jline;2.10.6: res=/home/joist/.ivy2/local/org.scala-lang/jline/2.10.6/jars/jline.jar
+	 trying http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.jar
+		tried http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.jar
+no source artifact found for org.scala-lang#jline;2.10.6
+no javadoc artifact found for org.scala-lang#jline;2.10.6
+	default-cache: parsed downloaded md file for org.scala-lang#jline;2.10.6; parsed=org.scala-lang#jline;2.10.6
+	checking org.scala-lang#jline;2.10.6 from Maven Central against [none]
+	module revision kept as first found: org.scala-lang#jline;2.10.6 from Maven Central
+	found org.scala-lang#jline;2.10.6 in Maven Central
+== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#jline;2.10.6 [optional->compile(*)]
+loadData of org.scala-lang#jline;2.10.6 of rootConf=default
+== resolving dependencies org.scala-lang#jline;2.10.6->org.fusesource.jansi#jansi;1.4 [compile->master(*)]
+loadData of org.fusesource.jansi#jansi;1.4 of rootConf=default
+	using redefined-public to resolve org.fusesource.jansi#jansi;1.4
+redefined-public: Checking cache for: dependency: org.fusesource.jansi#jansi;1.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+	no ivy file in cache for org.fusesource.jansi#jansi;1.4: tried /home/joist/.ivy2/cache/org.fusesource.jansi/jansi/ivy-1.4.xml
+	no ivy file in cache for org.fusesource.jansi#jansi;1.4: tried /home/joist/.ivy2/cache/org.fusesource.jansi/jansi/ivy-1.4.xml
+	 trying /home/joist/.ivy2/local/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml
+		tried /home/joist/.ivy2/local/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml
+	local: resource not reachable for org.fusesource.jansi#jansi;1.4: res=/home/joist/.ivy2/local/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml
+	 trying /home/joist/.ivy2/local/org.fusesource.jansi/jansi/1.4/jars/jansi.jar
+		tried /home/joist/.ivy2/local/org.fusesource.jansi/jansi/1.4/jars/jansi.jar
+	local: resource not reachable for org.fusesource.jansi#jansi;1.4: res=/home/joist/.ivy2/local/org.fusesource.jansi/jansi/1.4/jars/jansi.jar
+	local: no ivy file nor artifact found for org.fusesource.jansi#jansi;1.4
+	no ivy file in cache for org.fusesource.jansi#jansi;1.4: tried /home/joist/.ivy2/cache/org.fusesource.jansi/jansi/ivy-1.4.xml
+	 trying http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom
+		tried http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom
+	Maven Central: found md file for org.fusesource.jansi#jansi;1.4
+		=> http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom (1.4)
+	parser = pom parser
+	no ivy file in cache for org.fusesource.jansi#jansi;1.4: tried /home/joist/.ivy2/cache/org.fusesource.jansi/jansi/ivy-1.4.xml
+downloading http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom ...
+	Maven Central: downloading http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom
+		to /home/joist/.ivy2/cache/org.fusesource.jansi/jansi/ivy-1.4.xml.original.part
+sha1 file found for http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom: checking...
+	Maven Central: downloading http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom.sha1
+		to /tmp/ivytmp3998398423956112894sha1
+sha1 OK for http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom
+	[SUCCESSFUL ] org.fusesource.jansi#jansi;1.4!jansi.pom(pom.original) (764ms)
+	 trying /home/joist/.ivy2/local/org.fusesource.jansi/jansi/1.4/jars/jansi.jar
+		tried /home/joist/.ivy2/local/org.fusesource.jansi/jansi/1.4/jars/jansi.jar
+	local: resource not reachable for org.fusesource.jansi#jansi;1.4: res=/home/joist/.ivy2/local/org.fusesource.jansi/jansi/1.4/jars/jansi.jar
+	 trying http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar
+		tried http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar
+no source artifact found for org.fusesource.jansi#jansi;1.4
+no javadoc artifact found for org.fusesource.jansi#jansi;1.4
+	default-cache: parsed downloaded md file for org.fusesource.jansi#jansi;1.4; parsed=org.fusesource.jansi#jansi;1.4
+	checking org.fusesource.jansi#jansi;1.4 from Maven Central against [none]
+	module revision kept as first found: org.fusesource.jansi#jansi;1.4 from Maven Central
+	found org.fusesource.jansi#jansi;1.4 in Maven Central
+== resolving dependencies org.scala-lang#jline;2.10.6->org.fusesource.jansi#jansi;1.4 [compile->compile(*)]
+loadData of org.fusesource.jansi#jansi;1.4 of rootConf=default
+== resolving dependencies org.scala-sbt#boot-scala;1.0->org.scala-lang#scala-library;2.10.6 [default->default]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-sbt#boot-scala;1.0->org.scala-lang#scala-library;2.10.6 [default->runtime]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-sbt#boot-scala;1.0->org.scala-lang#scala-library;2.10.6 [default->compile]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+== resolving dependencies org.scala-sbt#boot-scala;1.0->org.scala-lang#scala-library;2.10.6 [default->master]
+loadData of org.scala-lang#scala-library;2.10.6 of rootConf=default
+default is loaded and no conf to load.  Skip loading
+Nbr of module to sort : 5
+Sort dependencies of : org.scala-lang#scala-compiler;2.10.6 / Number of dependencies = 3
+Sort dependencies of : org.scala-lang#scala-library;2.10.6 / Number of dependencies = 0
+Sort done for : org.scala-lang#scala-library;2.10.6
+Sort dependencies of : org.scala-lang#scala-reflect;2.10.6 / Number of dependencies = 1
+Module descriptor is processed : org.scala-lang#scala-library;2.10.6
+Sort done for : org.scala-lang#scala-reflect;2.10.6
+Sort dependencies of : org.scala-lang#jline;2.10.6 / Number of dependencies = 1
+Sort dependencies of : org.fusesource.jansi#jansi;1.4 / Number of dependencies = 1
+Sort done for : org.fusesource.jansi#jansi;1.4
+Sort done for : org.scala-lang#jline;2.10.6
+Sort done for : org.scala-lang#scala-compiler;2.10.6
+Module descriptor is processed : org.scala-lang#scala-library;2.10.6
+Module descriptor is processed : org.scala-lang#scala-reflect;2.10.6
+Module descriptor is processed : org.scala-lang#jline;2.10.6
+Module descriptor is processed : org.fusesource.jansi#jansi;1.4
+storing dependency org.scala-lang#scala-compiler;2.10.6 in props
+storing dependency org.scala-lang#scala-library;2.10.6 in props
 	resolved ivy file produced in cache
 :: downloading artifacts ::
-:: resolution report :: resolve 2500ms :: artifacts dl 0ms
-WARN: 	::::::::::::::::::::::::::::::::::::::::::::::
-WARN: 	::          UNRESOLVED DEPENDENCIES         ::
-WARN: 	::::::::::::::::::::::::::::::::::::::::::::::
-WARN: 	:: org.scala-sbt#sbt;0.13.12: not found
-WARN: 	::::::::::::::::::::::::::::::::::::::::::::::
-
-Nbr of module to sort : 0
-	report for org.scala-sbt#boot-app;1.0 default produced in /home/joist/.sbt/boot/resolution-cache/org.scala-sbt-boot-app-default.xml
-	resolve done (2500ms resolve - 0ms download)
-
-:: problems summary ::
-:::: WARNINGS
-		module not found: org.scala-sbt#sbt;0.13.12
-
-	==== local: tried
-
-	  /home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-
-	  -- artifact org.scala-sbt#sbt;0.13.12!sbt.jar:
-
-	  /home/joist/.ivy2/local/org.scala-sbt/sbt/0.13.12/jars/sbt.jar
-
-	==== Maven Central: tried
-
-	  https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.pom
-
-	  -- artifact org.scala-sbt#sbt;0.13.12!sbt.jar:
-
-	  https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.jar
-
-	==== typesafe-ivy-releases: tried
-
-	  https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-
-	==== sbt-ivy-snapshots: tried
-
-	  https://repo.scala-sbt.org/scalasbt/ivy-snapshots/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-
-		::::::::::::::::::::::::::::::::::::::::::::::
-
-		::          UNRESOLVED DEPENDENCIES         ::
-
-		::::::::::::::::::::::::::::::::::::::::::::::
-
-		:: org.scala-sbt#sbt;0.13.12: not found
-
-		::::::::::::::::::::::::::::::::::::::::::::::
-
-
-:::: ERRORS
-	Server access Error: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target url=https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.pom
-
-	Server access Error: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target url=https://repo1.maven.org/maven2/org/scala-sbt/sbt/0.13.12/sbt-0.13.12.jar
-
-	Server access Error: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target url=https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-
-	Server access Error: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target url=https://repo.scala-sbt.org/scalasbt/ivy-snapshots/org.scala-sbt/sbt/0.13.12/ivys/ivy.xml
-
-
-:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
-java.lang.RuntimeException: not found
-	at org.apache.ivy.core.resolve.IvyNode.loadData(IvyNode.java:238)
-	at org.apache.ivy.core.resolve.VisitNode.loadData(VisitNode.java:292)
-	at org.apache.ivy.core.resolve.ResolveEngine.fetchDependencies(ResolveEngine.java:714)
-	at org.apache.ivy.core.resolve.ResolveEngine.doFetchDependencies(ResolveEngine.java:799)
-	at org.apache.ivy.core.resolve.ResolveEngine.fetchDependencies(ResolveEngine.java:722)
-	at org.apache.ivy.core.resolve.ResolveEngine.getDependencies(ResolveEngine.java:594)
-	at org.apache.ivy.core.resolve.ResolveEngine.resolve(ResolveEngine.java:234)
-	at xsbt.boot.Update.xsbt$boot$Update$$lockedApply(Update.scala:105)
-	at xsbt.boot.Update$$anon$4.call(Update.scala:99)
-	at xsbt.boot.Locks$GlobalLock.withChannel$1(Locks.scala:93)
-	at xsbt.boot.Locks$GlobalLock.xsbt$boot$Locks$GlobalLock$$withChannelRetries$1(Locks.scala:78)
-	at xsbt.boot.Locks$GlobalLock$$anonfun$withFileLock$1.apply(Locks.scala:97)
-	at xsbt.boot.Using$.withResource(Using.scala:10)
-	at xsbt.boot.Using$.apply(Using.scala:9)
-	at xsbt.boot.Locks$GlobalLock.ignoringDeadlockAvoided(Locks.scala:58)
-	at xsbt.boot.Locks$GlobalLock.withLock(Locks.scala:48)
-	at xsbt.boot.Locks$.apply0(Locks.scala:31)
-	at xsbt.boot.Locks$.apply(Locks.scala:28)
-	at xsbt.boot.Update.apply(Update.scala:100)
-	at xsbt.boot.Launch.update(Launch.scala:350)
-	at xsbt.boot.Launch.xsbt$boot$Launch$$retrieve$1(Launch.scala:208)
-	at xsbt.boot.Launch$$anonfun$3.apply(Launch.scala:216)
-	at scala.Option.getOrElse(Option.scala:120)
-	at xsbt.boot.Launch.xsbt$boot$Launch$$getAppProvider0(Launch.scala:216)
-	at xsbt.boot.Launch$$anon$2.call(Launch.scala:196)
-	at xsbt.boot.Locks$GlobalLock.withChannel$1(Locks.scala:93)
-	at xsbt.boot.Locks$GlobalLock.xsbt$boot$Locks$GlobalLock$$withChannelRetries$1(Locks.scala:78)
-	at xsbt.boot.Locks$GlobalLock$$anonfun$withFileLock$1.apply(Locks.scala:97)
-	at xsbt.boot.Using$.withResource(Using.scala:10)
-	at xsbt.boot.Using$.apply(Using.scala:9)
-	at xsbt.boot.Locks$GlobalLock.ignoringDeadlockAvoided(Locks.scala:58)
-	at xsbt.boot.Locks$GlobalLock.withLock(Locks.scala:48)
-	at xsbt.boot.Locks$.apply0(Locks.scala:31)
-	at xsbt.boot.Locks$.apply(Locks.scala:28)
-	at xsbt.boot.Launch.locked(Launch.scala:238)
-	at xsbt.boot.Launch.app(Launch.scala:147)
-	at xsbt.boot.Launch.app(Launch.scala:145)
-	at xsbt.boot.Launch$.run(Launch.scala:102)
-	at xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:35)
-	at xsbt.boot.Launch$.launch(Launch.scala:117)
-	at xsbt.boot.Launch$.apply(Launch.scala:18)
-	at xsbt.boot.Boot$.runImpl(Boot.scala:41)
-	at xsbt.boot.Boot$.main(Boot.scala:17)
-	at xsbt.boot.Boot.main(Boot.scala)
-Error during sbt execution: Error retrieving required libraries
-	at xsbt.boot.Pre$.error(Pre.scala:26)
-	at xsbt.boot.Update.xsbt$boot$Update$$lockedApply(Update.scala:105)
-	at xsbt.boot.Update$$anon$4.call(Update.scala:99)
-	at xsbt.boot.Locks$GlobalLock.withChannel$1(Locks.scala:93)
-	at xsbt.boot.Locks$GlobalLock.xsbt$boot$Locks$GlobalLock$$withChannelRetries$1(Locks.scala:78)
-	at xsbt.boot.Locks$GlobalLock$$anonfun$withFileLock$1.apply(Locks.scala:97)
-	at xsbt.boot.Using$.withResource(Using.scala:10)
-	at xsbt.boot.Using$.apply(Using.scala:9)
-	at xsbt.boot.Locks$GlobalLock.ignoringDeadlockAvoided(Locks.scala:58)
-	at xsbt.boot.Locks$GlobalLock.withLock(Locks.scala:48)
-	at xsbt.boot.Locks$.apply0(Locks.scala:31)
-	at xsbt.boot.Locks$.apply(Locks.scala:28)
-	at xsbt.boot.Update.apply(Update.scala:100)
-	at xsbt.boot.Launch.update(Launch.scala:350)
-	at xsbt.boot.Launch.xsbt$boot$Launch$$retrieve$1(Launch.scala:208)
-	at xsbt.boot.Launch$$anonfun$3.apply(Launch.scala:216)
-	at scala.Option.getOrElse(Option.scala:120)
-	at xsbt.boot.Launch.xsbt$boot$Launch$$getAppProvider0(Launch.scala:216)
-	at xsbt.boot.Launch$$anon$2.call(Launch.scala:196)
-	at xsbt.boot.Locks$GlobalLock.withChannel$1(Locks.scala:93)
-	at xsbt.boot.Locks$GlobalLock.xsbt$boot$Locks$GlobalLock$$withChannelRetries$1(Locks.scala:78)
-	at xsbt.boot.Locks$GlobalLock$$anonfun$withFileLock$1.apply(Locks.scala:97)
-	at xsbt.boot.Using$.withResource(Using.scala:10)
-	at xsbt.boot.Using$.apply(Using.scala:9)
-	at xsbt.boot.Locks$GlobalLock.ignoringDeadlockAvoided(Locks.scala:58)
-	at xsbt.boot.Locks$GlobalLock.withLock(Locks.scala:48)
-	at xsbt.boot.Locks$.apply0(Locks.scala:31)
-	at xsbt.boot.Locks$.apply(Locks.scala:28)
-	at xsbt.boot.Launch.locked(Launch.scala:238)
-	at xsbt.boot.Launch.app(Launch.scala:147)
-	at xsbt.boot.Launch.app(Launch.scala:145)
-	at xsbt.boot.Launch$.run(Launch.scala:102)
-	at xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:35)
-	at xsbt.boot.Launch$.launch(Launch.scala:117)
-	at xsbt.boot.Launch$.apply(Launch.scala:18)
-	at xsbt.boot.Boot$.runImpl(Boot.scala:41)
-	at xsbt.boot.Boot$.main(Boot.scala:17)
-	at xsbt.boot.Boot.main(Boot.scala)
-Error during sbt execution: Error retrieving required libraries
+	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.6!scala-compiler.jar
+	[NOT REQUIRED] org.scala-lang#scala-library;2.10.6!scala-library.jar
+	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.6!scala-reflect.jar
+	 trying http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.jar
+		tried http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.jar
+downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.jar ...
+	Maven Central: downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.jar
+		to /home/joist/.ivy2/cache/org.scala-lang/jline/jars/jline-2.10.6.jar.part
+sha1 file found for http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.jar: checking...
+	Maven Central: downloading http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.jar.sha1
+		to /tmp/ivytmp5345286493819376172sha1
+sha1 OK for http://repo1.maven.org/maven2/org/scala-lang/jline/2.10.6/jline-2.10.6.jar
+	[SUCCESSFUL ] org.scala-lang#jline;2.10.6!jline.jar (1429ms)
+	 trying http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar
+		tried http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar
+downloading http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar ...
+	Maven Central: downloading http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar
+		to /home/joist/.ivy2/cache/org.fusesource.jansi/jansi/jars/jansi-1.4.jar.part
+sha1 file found for http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar: checking...
+	Maven Central: downloading http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar.sha1
+		to /tmp/ivytmp5751095324568561751sha1
+sha1 OK for http://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.jar
+	[SUCCESSFUL ] org.fusesource.jansi#jansi;1.4!jansi.jar (1107ms)
+:: resolution report :: resolve 2784ms :: artifacts dl 2541ms
+Nbr of module to sort : 5
+Sort dependencies of : org.scala-lang#scala-compiler;2.10.6 / Number of dependencies = 3
+Sort dependencies of : org.scala-lang#scala-library;2.10.6 / Number of dependencies = 0
+Sort done for : org.scala-lang#scala-library;2.10.6
+Sort dependencies of : org.scala-lang#scala-reflect;2.10.6 / Number of dependencies = 1
+Module descriptor is processed : org.scala-lang#scala-library;2.10.6
+Sort done for : org.scala-lang#scala-reflect;2.10.6
+Sort dependencies of : org.scala-lang#jline;2.10.6 / Number of dependencies = 1
+Sort dependencies of : org.fusesource.jansi#jansi;1.4 / Number of dependencies = 1
+Sort done for : org.fusesource.jansi#jansi;1.4
+Sort done for : org.scala-lang#jline;2.10.6
+Sort done for : org.scala-lang#scala-compiler;2.10.6
+Module descriptor is processed : org.scala-lang#scala-library;2.10.6
+Module descriptor is processed : org.scala-lang#scala-reflect;2.10.6
+Module descriptor is processed : org.scala-lang#jline;2.10.6
+Module descriptor is processed : org.fusesource.jansi#jansi;1.4
+	report for org.scala-sbt#boot-scala;1.0 default produced in /home/joist/.sbt/boot/resolution-cache/org.scala-sbt-boot-scala-default.xml
+	resolve done (2784ms resolve - 2541ms download)
+setting 'scala' to '2.10.6'
+:: retrieving :: org.scala-sbt#boot-scala
+	checkUpToDate=true
+post 1.3 ivy file: using exact as default matcher
+no explicit confs given for retrieve, using ivy file: file:/home/joist/.sbt/boot/resolution-cache/resolved-org.scala-sbt-boot-scala-1.0.xml
+	confs: [default]
+	retrieving /home/joist/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.10.6.jar
+		to /home/joist/.sbt/boot/scala-2.10.6/lib/scala-compiler.jar
+	retrieving /home/joist/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.6.jar
+		to /home/joist/.sbt/boot/scala-2.10.6/lib/scala-reflect.jar
+	retrieving /home/joist/.ivy2/cache/org.fusesource.jansi/jansi/jars/jansi-1.4.jar
+		to /home/joist/.sbt/boot/scala-2.10.6/lib/jansi.jar
+	retrieving /home/joist/.ivy2/cache/org.scala-lang/jline/jars/jline-2.10.6.jar
+		to /home/joist/.sbt/boot/scala-2.10.6/lib/jline.jar
+	retrieving /home/joist/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.6.jar
+		to /home/joist/.sbt/boot/scala-2.10.6/lib/scala-library.jar
+	5 artifacts copied, 0 already retrieved (24494kB/60ms)
+	retrieve done (60ms)
